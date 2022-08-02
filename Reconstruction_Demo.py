@@ -18,14 +18,14 @@ from sklearn.preprocessing import StandardScaler
 
 
 # get self-supervised learning data
-X_all = np.load('AllData.npz')['arr_0']
+# X_all = np.load('AllData.npz')['arr_0']
 
 # make a copy of X, each 87 times
-X_all_true = np.repeat(X_all, repeats=87, axis = 0)
+# X_all_true = np.repeat(X_all, repeats=87, axis = 0)
 
 # get labeled
-y = np.load('label.npz')['arr_0']
-X_labeled = np.load('features.npz')['arr_0']
+# y = np.load('label.npz')['arr_0']
+# X_labeled = np.load('features.npz')['arr_0']
 
 # train test split only on label data
 X_train_labeled, X_test_labeled, y_train, y_test = train_test_split(X_labeled,y,test_size=0.3, random_state=528)
