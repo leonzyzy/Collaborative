@@ -35,7 +35,7 @@ transformer = Transformer().to(device)
 
 # use Adam
 criterion = DiscriminationLoss(b, temperature = 1, div='cosine')
-optimizer_pretrain = torch.optim.SGD(transformer.parameters(), lr = 0.001,  momentum=0.9, nesterov=True)
+optimizer_pretrain = torch.optim.Adam(transformer.parameters(), lr = 0.001,  momentum=0.9, nesterov=True)
 
 def train(masked_contrasive_dataloader):
     transformer.train()
