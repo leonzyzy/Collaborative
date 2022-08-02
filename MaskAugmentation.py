@@ -38,28 +38,3 @@ def dataAugument(X, k):
         i += 1
         
     return X_mask
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
