@@ -59,34 +59,3 @@ def dataAugument(X):
 # pull all data
 df_sim = dataAugument(df)
 df_sim.shape
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
