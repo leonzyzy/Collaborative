@@ -69,9 +69,6 @@ for t in range(epochs):
     train(masked_contrasive_dataloader)
 print("Done!")   
 
-
-# training context prediction task
-
 # Make a mask data 
 X_ssl_masked_train_context = dataAugument(X_train, 20)
 
@@ -167,6 +164,5 @@ for t in range(epochs):
     trainDownSteam(X_train, y_train, loss_ent)
 print("Done!")   
     
-
 # predict
 y_pred = torch.round(classifer(X_test.to(device)).view(-1))
