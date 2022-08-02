@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Nov  2 18:20:09 2021
-
-@author: liz1aq
-"""
 from torch import nn
 from lib.normalize import Normalize
 
