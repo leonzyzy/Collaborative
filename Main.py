@@ -75,11 +75,9 @@ X_ssl_masked_train_context = dataAugument(X_train, 20)
 # make a copy of X, each 10 times, only used for context prediction
 X_ssl_true_train_context = np.repeat(X_train, repeats=10, axis = 0)
 
-
-# training second task
+# Test task 2
 groundtruth_loader = DataLoader(X_ssl_masked_train_context, batch_size=b)
 masked_dataloader = DataLoader(X_ssl_true_train_context, batch_size=b)
-
 
 # define models
 linearback = LinearBack().to(device)
@@ -131,7 +129,7 @@ print("Done!")
 # downsteam task:
 classifer = DownTask(transformer).to(device)
 loss_ent = nn.BCEWithLogitsLoss()
-optimizer_downtask = torch.optim.SGD(transformer.parameters(), lr = 0.001, momentum=0.9, nesterov=True)
+optimizer_downtask = torch.optim.Adam(transformer.parameters(), lr = 0.001, momentum=0.9, nesterov=True)
 
 
 # define a train function for downstreaming task
