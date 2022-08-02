@@ -161,7 +161,6 @@ def trainDownSteam(X_train, y_train, loss_fn):
         print("loss: {}".format(loss.item()))
 
 # pre-training encoder
-
 epochs = 5
 for t in range(epochs):
     print(f"\nEpoch {t+1}\n-------------------------------")
