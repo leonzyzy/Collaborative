@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 16 12:35:19 2021
-
-@author: liz1aq
-"""
-
 import torch
 from torch import nn
 from ProposedModel import *
