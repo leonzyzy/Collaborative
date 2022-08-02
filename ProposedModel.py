@@ -93,9 +93,3 @@ class DownTask(nn.Module):
         
         return x
     
-
-
-
-
-
-
