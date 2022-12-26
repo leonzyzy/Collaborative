@@ -10,7 +10,7 @@ import random
 import torch.backends.cudnn as cudnn
 import os
 
-class VGG16(nn.Module):
+class VGG19(nn.Module):
     def __init__(self, num_classes=10):
         super(VGG16, self).__init__()
         self.layer1 = nn.Sequential(
