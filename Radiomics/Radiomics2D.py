@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 14 20:01:51 2022
-
-@author: liz27
-"""
-
 import radiomics
 import sys, os
 import numpy as np
@@ -15,9 +9,9 @@ import SimpleITK as sitk
 from radiomics import featureextractor
 from collections import OrderedDict
 
-path = 'C:/Users/liz27/OneDrive/Documents/CCHMC/radiomics'
+path = '....'
 
-params = 'C:/Users/liz27/OneDrive/Documents/CCHMC/radiomics/Params.yaml'
+params = '....'
 extractor = featureextractor.RadiomicsFeatureExtractor(params)
 
 # read data
@@ -63,35 +57,3 @@ for j in np.unique(label):
                     features.columns = kept_features.keys()
    # add into a list
 all_subject_features.append(features.to_numpy())
-    
-    
-
-# remove duplicates 
-
-    
-# save the new data to csv
-for i in range(len(all_subject_features)):
-    df = pd.DataFrame(all_subject_features[i], columns = features.columns)
-    
-    
-# rename
-ROIs = ['TC2', 'TC2_ROI', 'TC1', 'TC1_ROI', 'DC1', 'J2', 'DC2', 'DC2_ROI', 'J1', 'AC1', 'AC2', 'AC2_ROI']
-
-df.index = ROIs
-df.to_csv('AllRadiomicsFeatures_PT-767_ARCCoreMRE_MRI038_2.csv')
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
