@@ -10,9 +10,9 @@ Install python 3.8, Scikit-Learn 0.24.1, Pytorch 1.9.1, and Cuda 11.1
 ### Result on CINEPS dataset
 | BA (%) | SEN (%) | SPE (%) |  AUC  |
 | -------| ------- | --------| ------|
-|  76.3  |  75.8   |   76.7  |  0.78 |
+|  76.3  |   75.8  |    76.7 |  0.78 |
 
 ### Result on COEPS dataset
 | BA (%) | SEN (%) | SPE (%) |  AUC  |
 | -------| ------- | --------| ------|
-|  71.4  |  70.0   |   72.9  |  0.70 |
+|  71.4  |   70.0  |    72.9 |  0.70 |
