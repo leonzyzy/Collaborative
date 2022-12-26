@@ -101,14 +101,3 @@ for t in range(epochs):
     trainDownSteam(loss_ent)
 print("Done!")   
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
