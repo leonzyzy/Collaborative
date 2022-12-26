@@ -9,4 +9,5 @@ Install python 3.8, Scikit-Learn 0.24.1, Pytorch 1.9.1, and Cuda 11.1
 
 ### Result
 | BA (%) | SEN (%) | SPE (%) |  AUC  |
+| -------| ------- | --------| ------|
 |  76.3  |   75.8  |   76.7  |  0.78 |
