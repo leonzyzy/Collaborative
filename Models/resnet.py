@@ -11,16 +11,6 @@ import numpy as np
 import random
 import torch.backends.cudnn as cudnn
 import os
-my_whole_seed = 111
-random.seed(my_whole_seed)
-np.random.seed(my_whole_seed)
-torch.manual_seed(my_whole_seed)
-torch.cuda.manual_seed_all(my_whole_seed)
-torch.cuda.manual_seed(my_whole_seed)
-np.random.seed(my_whole_seed)
-torch.backends.cudnn.deterministic = True
-torch.backends.cudnn.benchmark = False
-os.environ['PYTHONHASHSEED'] = str(my_whole_seed)
 
 class Flatten(nn.Module):
     def __init__(self):
