@@ -59,11 +59,6 @@ for batch,(Xi,Xj) in enumerate(masked_dataset_contrasive_dataloader):
     print(zi.shape)
     break
 
-
-
-
-
-
 # ini each model
 # GPU
 device = "cuda" if torch.cuda.is_available() else "cpu"
