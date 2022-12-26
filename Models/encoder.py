@@ -70,15 +70,6 @@ class Encoder(nn.Module):
 
 
 class TransformerEncoder(nn.Module):
-    """The encoder of transformer
-    Args:
-        `n_layers`: number of stacked encoder layers
-        `d_model`: model dimension
-        `d_ff`: hidden dimension of feed forward layer
-        `n_heads`: number of heads of self-attention
-        `dropout`: dropout rate, default 0.1
-    """
-
     def __init__(self, d_model: int, d_ff: int, n_heads: int = 1, n_layers: int = 1,
                  dropout: float = 0.1):
         super(TransformerEncoder, self).__init__()
