@@ -1,3 +1,5 @@
+# code from "https://github.com/guocheng2018/Transformer-Encoder/tree/master/transformer_encoder"
+
 import torch
 import torch.nn as nn
 
