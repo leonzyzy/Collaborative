@@ -6,17 +6,9 @@ from .feed_forward import FeedForward
 from .layer_norm import LayerNorm
 from .multi_head_attention import MultiHeadAttention
 from .utils import clones
-
-
 from typing import Union
 
-import torch
-import torch.nn as nn
 
-from .feed_forward import FeedForward
-from .layer_norm import LayerNorm
-from .multi_head_attention import MultiHeadAttention
-from .utils import clones
 
 class LayerNorm(nn.Module):
     def __init__(self, features: int, eps: float = 1e-6):
