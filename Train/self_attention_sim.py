@@ -187,7 +187,7 @@ def trainDownSteam(train_data, y_train, loss_fn):
 
 # pre-training encoder
 print("\n======Training Predictive Classifier===========")
-e = 5000
+e = 2000
 for step in range(e):
     if (step+1) % 100 == 0:
         print("Epoch: {}, ".format(step+1))   
@@ -198,5 +198,3 @@ for step in range(e):
 y_pred = torch.round(predictive_classifier(X_test.to(device)).view(-1))
 accuracy = (y_pred.to(device) == y_test.to(device)).sum()/len(y_test)
 accuracy
-
-
