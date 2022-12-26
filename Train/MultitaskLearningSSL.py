@@ -99,6 +99,7 @@ optimizer_context = torch.optim.Adam(proposedModel.parameters(), lr = 0.001)
         
 # define train function
 def train(masked_dataloader, groundtruth_loader):
+    lambda = 1
     size = len(masked_dataloader.dataset)
     
     # open training for bn, drop out
@@ -114,8 +115,24 @@ def train(masked_dataloader, groundtruth_loader):
         X_hat = proposedModel(X)
         
         # compute loss
-        loss = mse(X_hat, Z)
-
+        loss1 = mse(X_hat, Z)
+        
+        # for each pair
+        for i in range(0,10):
+            for j in range(0,10):
+                xi = X[:,i,:,:]
+                xj = X[:,j,:,:]
+                # compute code
+                zi = torch.flatten(transformer(xi), start_dim=1)
+                zj = torch.flatten(transformer(xj), start_dim=1)
+                    
+                # compute loss
+                loss2 = criterion(zi,zj)
+                losses =+ loss
+                
+        # train two losses
+        loss = loss1 + lambda*loss2
+        
         # Backpropagation
         optimizer_context.zero_grad()
         loss.backward()
