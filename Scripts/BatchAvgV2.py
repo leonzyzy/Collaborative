@@ -31,25 +31,6 @@ class BatchCriterionModel(nn.Module):
                 index = list(index.flatten("F"))
                 reordered_x = reordered_x[index,:]
 
-            # elif i == 2:
-            #     idx = list(np.arange(2, int(batchSize), 4))
-            #     idx1 = np.array([item + 1 for item in idx])
-            #     idx2 = np.array([item - 2 for item in idx])
-            #     idx3 = np.array([item - 1 for item in idx])
-            #     idx = np.array(idx)
-            #     index = np.stack([idx, idx1, idx2, idx3])
-            #     index = list(index.flatten("F"))
-            #     reordered_x = reordered_x[index,:]
-            # elif i == 3:
-            #     idx = list(np.arange(3, int(batchSize), 4))
-            #     idx1 = np.array([item - 3 for item in idx])
-            #     idx2 = np.array([item - 2 for item in idx])
-            #     idx3 = np.array([item - 1 for item in idx])
-            #     idx = np.array(idx)
-            #     index = np.stack([idx, idx1, idx2, idx3])
-            #     index = list(index.flatten("F"))
-            #     reordered_x = reordered_x[index,:]
-
             # reordered_x = reordered_x.data
             print ("x", x)
             print ("reord", reordered_x.data)
