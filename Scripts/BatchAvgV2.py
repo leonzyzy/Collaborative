@@ -73,4 +73,4 @@ class BatchCriterionModel(nn.Module):
             losses.append(loss)
         losses = losses[0] + 0.5*losses[1]
 
-        return 
+        return losses
