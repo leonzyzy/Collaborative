@@ -76,8 +76,8 @@ X_ssl_masked_train_context = dataAugument(X_train, 20)
 X_ssl_true_train_context = np.repeat(X_train, repeats=10, axis = 0)
 
 # Test task 2
-groundtruth_loader = DataLoader(X_ssl_masked_train_context, batch_size=b)
-masked_dataloader = DataLoader(X_ssl_true_train_context, batch_size=b)
+groundtruth_loader = DataLoader(X_ssl_true_train_context, batch_size=b)
+masked_dataloader = DataLoader(X_ssl_masked_train_context, batch_size=b)
 
 # define models
 linearback = LinearBack().to(device)
