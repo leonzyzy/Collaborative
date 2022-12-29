@@ -53,12 +53,12 @@ class ProposedModel(nn.Module):
         super(ProposedModel, self).__init__()
         self.transformer = Transformer
         self.linearBack = LinearBack
-        self.Distcrin = Distcrin
+        self.encoding = Distcrin
     
     def forward(self, x):
         x1 = self.transformer(x)
         x2 = self.linearBack(x1)
-        z = self.Distcrin(x1)
+        z = self.encoding(x1)
         return x2, z
 
 # define a downtask model using pretrained transformer
