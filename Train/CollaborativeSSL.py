@@ -128,10 +128,10 @@ def train(masked_dataloader, groundtruth_loader):
                     
                 # compute loss
                 loss2 = criterion(zi,zj)
-                losses =+ loss
+                losses =+ loss2
                 
         # train two losses
-        loss = loss1 + lambda*loss2
+        loss = loss1 + lambda*losses
         
         # Backpropagation
         optimizer_context.zero_grad()
