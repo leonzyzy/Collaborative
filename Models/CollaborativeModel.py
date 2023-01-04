@@ -39,10 +39,12 @@ class Distcrin(nn.Module):
      def __init__(self, Transformer):
         super(LinearBack, self).__init__()
         self.transformer = Transformer
+        self.flatten = nn.Flatten()
         self.l2norm = Normalize(2)
     
      def forward(self, x):
         x = self.transformer(x)
+        x = self.flatten(x)
         x = self.l2norm(x)
         return x
 
