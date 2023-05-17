@@ -98,5 +98,3 @@ original_gldm_LowGrayLevelEmphasis
 original_gldm_SmallDependenceEmphasis
 original_gldm_SmallDependenceHighGrayLevelEmphasis
 original_gldm_SmallDependenceLowGrayLevelEmphasis
-
-14+18+38+16+14
